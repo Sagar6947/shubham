@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-// $con = mysqli_connect("localhost", "weban82x_shubham", "H2#o;vO-J1a2", "weban82x_shubham_property") or die("Error " . mysqli_error($con));
-$con = mysqli_connect("localhost", "root", "", "shubham_property") or die("Error " . mysqli_error($con));
+$con = mysqli_connect("localhost", "weban82x_shubham", "H2#o;vO-J1a2", "weban82x_shubham_property") or die("Error " . mysqli_error($con));
+// $con = mysqli_connect("localhost", "root", "", "shubham_property") or die("Error " . mysqli_error($con));
 
 function slug($text, string $divider = '')
 {
