@@ -20089,7 +20089,7 @@ a.text-indigo:focus {
   padding-right: 10px;
 }
 
-@media (min-width: 1441px) {
+/* @media (min-width: 1441px) {
   .custom-arrow-spacing-30 .slick-arrow.slick-next {
     right: -70px;
   }
@@ -20097,7 +20097,7 @@ a.text-indigo:focus {
   .custom-arrow-spacing-30 .slick-arrow.slick-prev {
     left: -70px;
   }
-}
+} */
 
 @media (max-width: 1440px) and (min-width: 1200px) {
   .custom-arrow-spacing-30 .slick-arrow {
