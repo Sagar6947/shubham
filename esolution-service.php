@@ -44,7 +44,7 @@ $cat_id = $_GET['id'];;
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
                     ?>
-                    
+
                             <div class="col-lg-4 col-sm-6 mb-6" data-animate="zoomIn">
                                 <div class="card shadow-hover-1">
                                     <div class="hover-change-image bg-hover-overlay rounded-lg card-img-top service-image">

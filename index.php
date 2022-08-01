@@ -155,7 +155,7 @@
 
         <section class="py-11" style="background: url(img2/pattern-2.svg); background-size: cover;">
             <div class="container">
-                <p class="text-primary font-weight-500 letter-spacing-263 text-center text-uppercase ">Service</p>
+                <!-- <p class="text-primary font-weight-500 letter-spacing-263 text-center text-uppercase ">Service</p> -->
                 <h2 class="text-dark text-center mb-8">Our Services</h2>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-6" data-animate="zoomIn">
@@ -606,7 +606,7 @@
                 <span class="heading-divider mx-auto"></span>
                 <div class="slick-slider arrow-haft-inner mt-2 mx-0" data-slick-options='{"slidesToShow": 4, "autoplay":true,"dots":false,"responsive":[{"breakpoint": 1200,"settings": {"slidesToShow":3}},{"breakpoint": 992,"settings": {"slidesToShow":3}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"arrows":false,"autoplay":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"arrows":false,"autoplay":true}}]}'>
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-4 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/toilet.png" alt="Sofa & Carpet Cleaning">
                             </div>
@@ -618,7 +618,7 @@
                         </div>
                     </div>
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/home.png" alt="Full House Cleaning">
                             </div>
@@ -629,7 +629,7 @@
                         </div>
                     </div>
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/car-service.png" alt="Car Cleaning at Your Door Step ">
                             </div>
@@ -640,7 +640,7 @@
                         </div>
                     </div>
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/kitchen.png" alt="Kitchen Cleaning">
                             </div>
@@ -651,8 +651,8 @@
                         </div>
                     </div>
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
-                            <div class="d-flex justify-content-center card-img-top">Sofa & Carpet Cleaning
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
+                            <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/sofa.png" alt="Sofa & Carpet Cleaning">
                             </div>
                             <div class="card-body px-0 pt-5 pb-0 text-center">
@@ -663,7 +663,7 @@
                     </div>
 
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/insecticide.png" alt="Pest Control">
                             </div>
@@ -675,7 +675,7 @@
                     </div>
 
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/electrician.png" alt="Electrician">
                             </div>
@@ -687,7 +687,7 @@
                     </div>
 
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/plumber.png" alt="Plumber">
                             </div>
@@ -699,7 +699,7 @@
                     </div>
 
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/carpenter.png" alt="Carpenter">
                             </div>
@@ -711,7 +711,7 @@
                     </div>
 
                     <div class="box px-0 py-6" data-animate="fadeInUp">
-                        <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                        <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
                             <div class="d-flex justify-content-center card-img-top">
                                 <img src="img2/painting.png" alt="White Wash / Wall Painting">
                             </div>

@@ -96,10 +96,10 @@ include 'includes/header-links.php';
 
         <section class="pt-7 pb-1 bg-patten-04">
             <div class="container container-xxl">
-                <p class="text-primary letter-spacing-263 text-uppercase lh-186 text-center mb-0">Service</p>
+                <!-- <p class="text-primary letter-spacing-263 text-uppercase lh-186 text-center mb-0">Service</p>
                 <h2 class="text-center text-dark lh-1625 mxw-940 mb-1">
                     Categories
-                </h2>
+                </h2> -->
                 <div class="slick-slider slick-dots-mt-0 item-nth-2-active-lg" data-slick-options='{"slidesToShow": 5, "dots":false,"arrows":false,"responsive":[{"breakpoint": 1600,"settings": {"slidesToShow":4,"dots":true}},{"breakpoint": 1200,"settings": {"slidesToShow":4,"dots":true}},{"breakpoint": 992,"settings": {"slidesToShow":3 ,"dots":true}},{"breakpoint": 768,"settings": {"slidesToShow": 2 ,"dots":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"dots":true}}]}'>
 
                     <?php
@@ -109,7 +109,7 @@ include 'includes/header-links.php';
                     ?>
 
                         <div class="py-8">
-                            <div class="card border-lg-0 shadow-hover-xs-4 hover-change-image" data-animate="flipInX">
+                            <div class="card border-lg-0 shadow-hover-xs-4 hover-change-image box-shadow-new border-btm" data-animate="flipInX">
                                 <div class="card-body text-center pt-3 pb-3 px-3">
                                     <a href="category-single-page.php?id=<?php echo $ro['cid']; ?>" class="d-inline-block mb-2">
                                         <img src="img2/category.png" alt="Shubham Property">
@@ -128,11 +128,11 @@ include 'includes/header-links.php';
             </div>
         </section>
 
-        <section class="pt-lg-12 pt-1 pb-11">
+        <section class="pt-lg-12 pt-1 pb-11 bg-grey">
             <div class="container container-xxl">
                 <div class="row flex-lg-row flex-cloumn">
                     <div class="col-lg-12 ">
-                        <h2 class="text-heading">Our Services</h2>
+                        <h2 class="text-heading">Book Your Service</h2>
                         <span class="heading-divider"></span>
                     </div>
 
@@ -145,7 +145,7 @@ include 'includes/header-links.php';
                                     <img src="images2/properties-grid-08.jpg" class="card-img" alt="Villa on Hollywood Boulevard">
                                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
                                         <div class="mt-auto px-2 ">
-                                            <h4 class="mt-0 mb-2 lh-1 "><a href="#" class="fs-16 text-white bg-tp-orng">Full House Cleaning</a></h4>
+                                            <h4 class="mt-0 mb-2 lh-1 "><a href="#" class="fs-16 bg-tp-orng">Full House Cleaning</a></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -156,7 +156,7 @@ include 'includes/header-links.php';
                                     <img src="images2/properties-grid-08.jpg" class="card-img" alt="Villa on Hollywood Boulevard">
                                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
                                         <div class="mt-auto px-2">
-                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 text-white bg-tp-orng">Bathroom Cleaning</a></h4>
+                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 bg-tp-orng">Bathroom Cleaning</a></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@ include 'includes/header-links.php';
                                     <img src="images2/properties-grid-08.jpg" class="card-img" alt="Villa on Hollywood Boulevard">
                                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
                                         <div class="mt-auto px-2">
-                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 text-white bg-tp-orng">Kitchen Cleaning</a></h4>
+                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 bg-tp-orng">Kitchen Cleaning</a></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -178,7 +178,7 @@ include 'includes/header-links.php';
                                     <img src="images2/properties-grid-08.jpg" class="card-img" alt="Villa on Hollywood Boulevard">
                                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
                                         <div class="mt-auto px-2">
-                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 text-white bg-tp-orng">Pest Control</a></h4>
+                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 bg-tp-orng">Pest Control</a></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -197,7 +197,7 @@ include 'includes/header-links.php';
         </section>
 
 
-        <section class="bg-patten-04 bg-gray-01 pb-10 pt-5">
+        <section class="pb-10 pt-5">
             <div class="container">
                 <h2 class="text-dark lh-1625 text-center mb-1 fs-22 fs-md-32">How We Work</h2>
 

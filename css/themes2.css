@@ -6093,7 +6093,7 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  /* padding: 1.25rem; */
 }
 
 .card-title {
@@ -22778,6 +22778,7 @@ form input:focus {
 
 .bg-overlay-gradient-3 {
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .bg-overlay-gradient-3::before {
@@ -25429,12 +25430,13 @@ a.bg-hover-indigo:focus {
 }
 
 .bg-patten-04 {
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img2/bg-1.jpg);
+  /* background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img2/bg-1.jpg); */
   /* background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(../img2/bg-1.jpg); */
+  background-image: url(../img2/so-white.png);
   background-size: cover;
   /* background-image: url(../img2/bg-1.jpg); */
-  background-position: center bottom;
-  background-repeat: no-repeat;
+  /* background-position: center bottom; */
+  background-repeat: repeat;
   background-size: auto;
 }
 
@@ -26055,7 +26057,7 @@ button:focus {
 }
 
 .border-btm {
-  border-bottom: 3px solid #E76813;
+  border-bottom: 3px solid #E76813 !important;
   border-radius: 5px;
 }
 
@@ -26064,13 +26066,14 @@ button:focus {
 }
 
 .banner-highlights {
-  color: #E76813 !important;
+  color: #e1b103 !important;
   font-size: 35px !important;
 }
 
 .bg-tp-orng {
-  background: rgb(231 104 19 / 45%);
+  background: #ffffff;
   padding: 0 9px;
+  color: #000;
 }
 
 .banner-height {
@@ -26259,7 +26262,7 @@ button:focus {
 }
 
 .service-image {
-  height: 375px;
+  height: 200px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -26269,4 +26272,9 @@ button:focus {
 .service-image img {
   object-fit: contain;
   background-color: #f7f7f7;
+}
+
+.bg-grey{
+  background-color: #f6f6f6;
+  background-image: url(../img2/bg2.webp);
 }
