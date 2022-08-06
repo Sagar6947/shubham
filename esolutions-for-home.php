@@ -1,197 +1,103 @@
-<?php
-include 'config.php';
-include 'includes/header-links.php';
-?>
+<?php include('config.php') ?>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Real Estate Html Template">
+    <meta name="author" content="">
+    <meta name="generator" content="Jekyll">
+    <title>Welcome to Shubham Enterprises</title>
+    <?php include 'includes/header-links.php'; ?>
+
+</head>
+
 
 <body>
 
-    <?php include 'includes/header.php' ?>
-
+    <?php include 'includes/header.php'; ?>
 
     <main id="content">
-        <section>
-            <div id="househunting" class="slick-slider mx-0 custom-arrow-center " data-slick-options='{"slidesToShow": 1, "autoplay":true,"responsive":[{"breakpoint": 1200,"settings": {"slidesToShow":1,"arrows":false,"dots":false}},{"breakpoint": 992,"settings": {"slidesToShow":1,"arrows":false,"dots":false}},{"breakpoint": 768,"settings": {"slidesToShow": 1,"arrows":false,"dots":false}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"arrows":false,"dots":false}}]}'>
-                <div class="box px-0 d-flex flex-column" style="height: 70vh;">
-                    <div class="bg-cover d-flex align-items-center custom-vh-02" style="background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('img2/slider/4.jpg'); background-size: cover;">
-                        <div class="container">
-                            <div class="row py-8" data-animate="zoomIn">
+        <section style="background-image: url('images/bg-about-us.jpg')" class="bg-img-cover-center py-5  bg-overlay">
+            <div class="container position-relative z-index-2 text-center">
 
-                                <div class="col-lg-7 col-md-6">
+                <div class="mxw-751">
+                    <h1 class="
+                text-white
+                fs-25 fs-md-30
+                lh-15
+                font-weight-normal
+                mt-4
+                mb-8
+              " data-animate="fadeInRight">
+                        Home Service On Demand
 
-                                    <h2 class="lh-12 mb-4 text-white fs-md-60 fs-48 z2">E-Solutions<br> For Homes <br> <span class="banner-highlights z2"> -Carpenter</span></h2>
+                    </h1>
 
-                                </div>
-                            </div>
+                    <form class="d-flex">
+                        <div class="position-relative w-100">
+                            <i class="far fa-search text-dark fs-18 position-absolute pl-4 pos-fixed-left-center"></i>
+                            <input type="text" class="rounded-bottom-right-lg w-100 pl-8 py-4 bg-white border-0 fs-13 font-weight-500 text-gray-light rounded-0 lh-17" placeholder="Search For Service" name="search" list="browsers">
+
+                            <datalist id="browsers">
+                                <?php
+                                $i = 0;
+                                $er = "SELECT * FROM `tbl_category`";
+                                $pro = mysqli_query($con, $er);
+                                while ($ro = mysqli_fetch_assoc($pro)) {
+                                    $i = $i + 1;
+                                ?>
+                                    <option value="<?= $ro['cat_name'] ?>">
+                                    <?php
+                                }
+                                    ?>
+                            </datalist>
                         </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary fs-16 font-weight-600 rounded-left-0 rounded-lg">
+                            Search
+                        </button>
+                    </form>
+                    <p class="text-white">Bathroom Cleaning , Carpenter , White Wash / Wall Painting ETC </p>
                 </div>
-                <div class="box px-0 d-flex flex-column" style="height: 70vh;">
-                    <div class="bg-cover d-flex align-items-center custom-vh-02" style="background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('img2/slider/2.jpg'); background-size: cover;">
-                        <div class="container">
-                            <div class="row py-8" data-animate="zoomIn">
-
-                                <div class="col-lg-7 col-md-6">
-
-                                    <h2 class="lh-12 mb-4 text-white fs-md-60 fs-48 z2">
-                                        E-Solutions<br> For Homes <br> <span class="banner-highlights">- Car Cleaning</span></h2>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box px-0 d-flex flex-column" style="height: 70vh;">
-                    <div class="bg-cover d-flex align-items-center custom-vh-02" style="background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('img2/slider/3.jpg'); background-size: cover;">
-                        <div class="container">
-                            <div class="row py-8" data-animate="zoomIn">
-
-                                <div class="col-lg-7 col-md-6">
-
-                                    <h2 class="lh-12 mb-4 text-white fs-md-60 fs-48 z2">
-                                        E-Solutions<br> For Homes <br> <span class="banner-highlights">- Electrician </span>
-                                    </h2>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="box px-0 d-flex flex-column" style="height: 70vh;">
-                    <div class="bg-cover d-flex align-items-center custom-vh-02" style="background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('img2/slider/5.jpg'); background-size: cover;">
-                        <div class="container">
-                            <div class="row py-8" data-animate="zoomIn">
-
-                                <div class="col-lg-7 col-md-6">
-
-                                    <h2 class="lh-12 mb-4 text-white fs-md-60 fs-48 z2">E-Solutions<br> For Homes <br> <span class="banner-highlights"> -White Wash / Wall Painting</span>
-                                    </h2>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="box px-0 d-flex flex-column" style="height: 70vh;">
-                    <div class="bg-cover d-flex align-items-center custom-vh-02" style="background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('img2/slider/7.jpg'); background-size: cover;">
-                        <div class="container">
-                            <div class="row py-8" data-animate="zoomIn">
-
-                                <div class="col-lg-7 col-md-6">
-
-                                    <h2 class="lh-12 mb-4 text-white fs-md-60 fs-48 z2">E-Solutions<br> For Home <br><span class="banner-highlights"> -Full House Cleaning</span>
-                                    </h2>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </section>
 
 
-        <section class="pt-7 pb-1 bg-patten-04">
-            <div class="container container-xxl">
-                <!-- <p class="text-primary letter-spacing-263 text-uppercase lh-186 text-center mb-0">Service</p>
-                <h2 class="text-center text-dark lh-1625 mxw-940 mb-1">
-                    Categories
-                </h2> -->
-                <div class="slick-slider slick-dots-mt-0 item-nth-2-active-lg" data-slick-options='{"slidesToShow": 5, "dots":false,"arrows":false,"responsive":[{"breakpoint": 1600,"settings": {"slidesToShow":4,"dots":true}},{"breakpoint": 1200,"settings": {"slidesToShow":4,"dots":true}},{"breakpoint": 992,"settings": {"slidesToShow":3 ,"dots":true}},{"breakpoint": 768,"settings": {"slidesToShow": 2 ,"dots":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"dots":true}}]}'>
+        <section class="bg-gray-02 pt-9 pb-lg-8" style="background: url(img2/bg2.webp);">
+            <div class="container">
+                <h2 class="text-heading text-center">E-Solutions For Homes</h2>
+                <span class="heading-divider mx-auto"></span>
+                <div class="row mt-7 justify-content-center">
 
                     <?php
+                    $i = 0;
                     $er = "SELECT * FROM `tbl_category`";
                     $pro = mysqli_query($con, $er);
                     while ($ro = mysqli_fetch_assoc($pro)) {
+                        $i = $i + 1;
                     ?>
 
-                        <div class="py-8">
-                            <div class="card border-lg-0 shadow-hover-xs-4 hover-change-image box-shadow-new border-btm" data-animate="flipInX">
-                                <div class="card-body text-center pt-3 pb-3 px-3">
-                                    <a href="category-single-page.php?id=<?php echo $ro['cid']; ?>" class="d-inline-block mb-2">
-                                        <img src="img2/category.png" alt="Shubham Property">
-                                    </a>
-                                    <a href="category-single-page.php?id=<?php echo $ro['cid']; ?>" class="d-block fs-16 lh-2 text-dark mb-0 font-weight-500 hover-primary">
-                                        <b><?php echo $ro['cat_name']; ?></b></a>
-                                    <!-- <p class="mb-2">Sales Excutive</p> -->
-                                </div>
+                        <div class="box px-0 col-sm-6 col-md-4 col-lg-2 mb-6" data-animate="fadeInUp">
+                            <div class="card border-0 py-4 px-3 shadow-hover-3 bg-transparent bg-hover-white">
+                                <a href="service-details.php?id=<?= base64_encode($ro['cid']) ?>&&service=<?= str_replace(' ', '-', $ro['cat_name']) ?>">
+                                    <div class="d-flex justify-content-center card-img-top">
+
+                                        <img src="dashboard/images/category/<?= $ro['image'] ?>" class="swidth" alt="<?= $ro['cat_name'] ?>" height="50px">
+                                    </div>
+                                    <div class="card-body  pt-5 pb-0 text-center">
+                                        <h4 class="card-title fs-16 lh-13 text-dark"><?= $ro['cat_name'] ?></h4>
+
+                                    </div>
+                                </a>
                             </div>
                         </div>
-
                     <?php
                     }
                     ?>
-                </div>
-            </div>
-        </section>
 
-        <section class="pt-lg-12 pt-1 pb-11 bg-grey">
-            <div class="container container-xxl">
-                <div class="row flex-lg-row flex-cloumn">
-                    <div class="col-lg-12 ">
-                        <h2 class="text-heading">Book Your Service</h2>
-                        <span class="heading-divider"></span>
-                    </div>
 
-                </div>
-                <div class="tab-content p-0 shadow-none" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
-                        <div class="row">
-                            <div class="col-xxl-3 col-lg-3 col-md-6 mb-6" data-animate="zoomIn">
-                                <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
-                                    <img src="images2/properties-grid-08.jpg" class="card-img" alt="Villa on Hollywood Boulevard">
-                                    <div class="card-img-overlay d-flex flex-column position-relative-sm">
-                                        <div class="mt-auto px-2 ">
-                                            <h4 class="mt-0 mb-2 lh-1 "><a href="#" class="fs-16 bg-tp-orng">Full House Cleaning</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="col-xxl-3 col-lg-3 col-md-6 mb-6" data-animate="zoomIn">
-                                <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
-                                    <img src="images2/properties-grid-08.jpg" class="card-img" alt="Villa on Hollywood Boulevard">
-                                    <div class="card-img-overlay d-flex flex-column position-relative-sm">
-                                        <div class="mt-auto px-2">
-                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 bg-tp-orng">Bathroom Cleaning</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xxl-3 col-lg-3 col-md-6 mb-6" data-animate="zoomIn">
-                                <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
-                                    <img src="images2/properties-grid-08.jpg" class="card-img" alt="Villa on Hollywood Boulevard">
-                                    <div class="card-img-overlay d-flex flex-column position-relative-sm">
-                                        <div class="mt-auto px-2">
-                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 bg-tp-orng">Kitchen Cleaning</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xxl-3 col-lg-3 col-md-6 mb-6" data-animate="zoomIn">
-                                <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
-                                    <img src="images2/properties-grid-08.jpg" class="card-img" alt="Villa on Hollywood Boulevard">
-                                    <div class="card-img-overlay d-flex flex-column position-relative-sm">
-                                        <div class="mt-auto px-2">
-                                            <h4 class="mt-0 mb-2 lh-1"><a href="#" class="fs-16 bg-tp-orng">Pest Control</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="text-center">
-                    <a href="#" class="btn btn-lg text-secondary btn-accent rounded-lg mt-6">Let's Connect
-                        <i class="far fa-long-arrow-right ml-1"></i>
-                    </a>
                 </div>
             </div>
         </section>
@@ -262,15 +168,8 @@ include 'includes/header-links.php';
 
     </main>
 
-    <?php include 'includes/footer.php' ?>
-
-    <?php include 'includes/footer-links.php' ?>
-
-
-
-    <div class="position-fixed pos-fixed-bottom-right p-6 z-index-10">
-        <a href="#" class="gtf-back-to-top bg-white text-primary hover-white bg-hover-primary shadow p-0 w-52px h-52 rounded-circle fs-20 d-flex align-items-center justify-content-center" title="Back To Top"><i class="fal fa-arrow-up"></i></a>
-    </div>
+    <?php include('footer.php'); ?>
+    <?php include('footer-link.php'); ?>
 </body>
 
 

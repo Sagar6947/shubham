@@ -55,9 +55,8 @@
                                     <tr>
                                         <th>Id</th>
                                         <th>Category</th>
+                                        <th>Image</th>
                                         <th>status</th>
-                                        
-
                                         <th>Edit</th>
                                         <th>Delete</th>
                                     </tr>
@@ -75,10 +74,11 @@
                                             <td><?= $i; ?></td>
 
                                             <td><?= $ro['cat_name'] ?></td>
+                                            <td><img src="images/category/<?= $ro['image'] ?>" height="50px"></td>
 
                                             <form method="post">
                                                 <td>
-                                                   
+
                                                     <select class="form-control" name="status" id="status<?= $ro['cid'] ?>">
                                                         <option value="0" <?= (($ro['status'] == '0') ? 'selected' : '') ?>>Active</option>
                                                         <option value="1" <?= (($ro['status'] == '1') ? 'selected' : '') ?>>In-Active</option>
@@ -119,9 +119,9 @@
     <script>
         $('.upload').click(function() {
             var id = $(this).data('id');
-            
+
             var status = $('#status' + id).val();
-            
+
             $.ajax({
                 url: "main-category-status.php",
                 method: "POST",
@@ -132,7 +132,7 @@
 
                 },
                 success: function(data) {
-                    
+
                     alert("Your changes have been saved")
                     location.reload();
 

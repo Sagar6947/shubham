@@ -23,7 +23,7 @@
                                     </li> -->
                                 </ul>
                                 <div class="card-body px-sm-6 shadow-xxs-2 pb-5 pt-0">
-                                    <form>
+                                    <form method="post" action="property_sell_code.php">
                                         <div class="tab-content pt-1 pb-0 px-0 shadow-none">
                                             <div class="tab-pane fade show active" id="schedule" role="tabpanel">
                                                 <div class="slick-slider calendar arrow-hide-disable mx-n1" data-slick-options='{"slidesToShow": 5, "autoplay":false,"dots":false}'>

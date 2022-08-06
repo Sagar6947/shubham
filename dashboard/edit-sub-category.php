@@ -10,21 +10,35 @@ $msg = '';
 if (isset($_POST["submit"])) {
     $id = base64_decode($_GET['id']);
 
+    // print_r($_POST);
+
     $cat_name = mysqli_real_escape_string($con, $_POST['cat_name']);
     $cat_id = $_POST['main_category_id'];
+    if (!empty($_FILES['image']['name'])) {
+        $file = $_FILES['image']['name'];
+        $tmpfile = $_FILES['image']['tmp_name'];
+        $folder = (($file == '') ? '' : date("dmYHis") . $file);
+        move_uploaded_file($tmpfile, 'images/subcategory/' . $folder);
+    } else {
+        $folder = $_POST['img'];
+    }
 
-    $rt = "UPDATE `tbl_sub_category` SET  `category_id`='$cat_id' `subcat_name`='$cat_name' WHERE `sid` = '$id'";
+    $rt = "UPDATE `tbl_sub_category` SET  `category_id`='$cat_id' , `subcat_name`='$cat_name' ,`image`='$folder' WHERE `sid` = '$id'";
+
+    // echo $rt;
+    // exit();
+
     $result = mysqli_query($con, $rt);
 
     if ($result) {
         $msg = '<div class="alert alert-success" role="alert">
-           Category Update Successfully</div>';
+        Sub Category Update Successfully</div>';
     } else {
         $msg = '<div class="alert alert-danger" role="alert">
                Something went wrong. Please try again later 
            </div>';
     }
-    echo '<script>window.location="main-category.php"</script>';
+    echo '<script>window.location="sub-category.php"</script>';
 }
 ?>
 
@@ -82,31 +96,44 @@ if (isset($_POST["submit"])) {
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            
-                                            <?php
-                                                $sql1 = "SELECT * FROM tbl_category";
-                                                
-                                                $result1 = mysqli_query($con, $sql1) or die("Query Unsuccessful");
-                                                
-                                                if (mysqli_num_rows($result1) > 0) {
-                                                    echo '<label for="tb-fname">main Category</label>';
-                                                    
-                                                    echo '<select name="main_category_id" class="form-control">
-                            <option value="" disabled>Select Main Category</option>';
+                                            <div class="form-floating mb-3">
+                                                <select class="form-control" name="main_category_id">
 
-                                                    while ($row1 = mysqli_fetch_assoc($result1)) {
-                                                        if ($row1['category_id'] == $ro['cid']) {
-                                                            $select = 'selected';
-                                                        } else {
-                                                            $select = "";
+                                                    <option>Select Category</option>
+                                                    <?php
+                                                    $sql1 = "SELECT * FROM tbl_category";
+
+                                                    $result1 = mysqli_query($con, $sql1);
+
+                                                    if (mysqli_num_rows($result1) > 0) {
+                                                        while ($row1 = mysqli_fetch_array($result1)) {
+                                                    ?>
+
+                                                            <option value="<?= $row1['cid'] ?>" <?= (($row1['cid'] == $ro['category_id']) ? 'selected' : '') ?>>
+                                                                <?= $row1['cat_name'] ?></option>
+
+
+                                                    <?php
                                                         }
-                                                        echo "<option {$select} value='{$row1['cid']}'>{$row1['cat_name']}</option>";
                                                     }
-                                                    echo '</select>';
-                                                }
-                                                ?>
+                                                    ?>
+                                                </select>
+                                            </div>
 
-                                         
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating  mb-3">
+                                                <input type="file" class="form-control" placeholder="Profile Image" name="image" accept="image/png, image/jpg, image/jpeg , image/webp">
+
+                                                <input type="hidden" name="img" value="<?= $ro['image'] ?>">
+
+                                                <label for="tb-cpwd">Image</label>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <img src="images/category/<?= $ro['image'] ?>" width="100px">
                                         </div>
                                         <div class="col-12">
                                             <div class="d-md-flex align-items-center mt-3">

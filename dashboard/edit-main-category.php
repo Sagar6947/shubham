@@ -10,7 +10,18 @@ $msg = '';
 if (isset($_POST["submit"])) {
     $id = base64_decode($_GET['id']);
     $cat_name = mysqli_real_escape_string($con, $_POST['cat_name']);
-    $rt = "UPDATE `tbl_category` SET `cat_name`='$cat_name' WHERE `cid` = '$id'";
+    if (!empty($_FILES['image']['name'])) {
+        $file = $_FILES['image']['name'];
+        $tmpfile = $_FILES['image']['tmp_name'];
+        $folder = (($file == '') ? '' : date("dmYHis") . $file);
+        move_uploaded_file($tmpfile, 'images/category/' . $folder);
+    } else {
+        $folder = $_POST['img'];
+    }
+
+
+
+    $rt = "UPDATE `tbl_category` SET `cat_name`='$cat_name' ,`image`='$folder' WHERE `cid` = '$id'";
     $result = mysqli_query($con, $rt);
 
     if ($result) {
@@ -21,7 +32,7 @@ if (isset($_POST["submit"])) {
                Something went wrong. Please try again later 
            </div>';
     }
-    echo'<script>window.location="main-category.php"</script>';
+    echo '<script>window.location="main-category.php"</script>';
 }
 ?>
 
@@ -72,14 +83,31 @@ if (isset($_POST["submit"])) {
                                 <p><?= $msg; ?></p>
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control" id="tb-fname" placeholder="Enter Title here" name="cat_name" value="<?= $ro['cat_name'];  ?>">
                                                 <label for="tb-fname">Name</label>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="d-md-flex align-items-center mt-3">
+
+                                        <div class="col-md-4">
+                                            <div class="form-floating  mb-3">
+                                                <input type="file" class="form-control" placeholder="Profile Image" name="image" accept="image/png, image/jpg, image/jpeg , image/webp">
+
+                                                <input type="hidden" name="img" value="<?= $ro['image'] ?>">
+
+                                                <label for="tb-cpwd">Image</label>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <img src="images/category/<?= $ro['image'] ?>" width="100px">
+                                        </div>
+
+
+                                        <div class="col-md-12">
+                                            <div class=" align-items-center mt-3">
 
                                                 <div class="ms-auto mt-3 mt-md-0">
                                                     <button type="submit" name="submit" class="btn btn-primary text-white">Submit</button>

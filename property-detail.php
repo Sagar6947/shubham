@@ -117,7 +117,7 @@ if (isset($_POST['review'])) {
                             </div>
                             <div class="d-sm-flex justify-content-sm-between mb-6">
                                 <div>
-                                    <h2 class="fs-35 font-weight-600 lh-15 text-heading"> <?= $datarow['property_name']; ?></h2>
+                                    <h2 class="fs-35 font-weight-600 lh-15 text-heading"> <?= $datarow['property_name']; ?><span class="h6 text-danger">(<?= $datarow['registration_no'] ?>)</span></h2>
                                     <p class="mb-0"><i class="fal fa-map-marker-alt mr-2"></i><?= $datarow['address'] ?></p>
                                 </div>
                                 <div class="mt-2 text-lg-right">
@@ -141,7 +141,8 @@ if (isset($_POST['review'])) {
                                         <div class="box px-0">
                                             <div class="item item-size-3-2">
                                                 <div class="card p-0 hover-change-image">
-                                                    <a href="agent-dashboard/images/property/<?= $img_fetch['image'] ?>" class="card-img" data-gtf-mfp="true" data-gallery-id="04" style="background-image:url('agent-dashboard/images/property/<?= $img_fetch['image'] ?>')">
+                                                    <a href="agent-dashboard/images/property/<?= $img_fetch['image'] ?>" class="card-img" data-gtf-mfp="true" data-gallery-id="04" style="background-image:url('agent-dashboard/images/property/<?= $img_fetch['image'] ?>'); width:100% " >
+                                                     <img src="img2/copyright.png" alt="Shubham Property" class="fish">
                                                     </a>
                                                 </div>
                                             </div>
@@ -407,32 +408,7 @@ if (isset($_POST['review'])) {
 
                             </div>
                         </section>
-                        <section>
-                            <div class="card border-0">
-                                <div class="card-body p-0">
-                                    <h3 class="fs-16 lh-2 text-heading mb-4">Write A Review</h3>
-                                    <form method="post">
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form-group mb-4">
-                                                    <input placeholder="Your Name" class="form-control form-control-lg border-0" type="text" name="name">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form-group mb-4">
-                                                    <input type="email" placeholder="Email" name="email" class="form-control form-control-lg border-0">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-6">
-                                            <textarea class="form-control form-control-lg border-0" placeholder="Your Review" name="message" rows="5"></textarea>
-                                        </div>
-                                        <button type="submit" name="review" class="btn btn-lg btn-primary px-10 mb-2">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </section>
 
                     </article>
                     <aside class="col-lg-4 primary-sidebar sidebar-sticky" id="sidebar">
