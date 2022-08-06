@@ -1,10 +1,3 @@
-<?php
-
-$ss = "SELECT * FROM `tbl_social` ";
-$sos = mysqli_query($con, $ss);
-$social = mysqli_fetch_array($sos);
-
-?>
 
 
 <header class="main-header navbar-light header-sticky header-sticky-smart header-mobile-lg">

@@ -2,11 +2,12 @@
 session_start();
 $con = mysqli_connect("localhost", "weban82x_shubham", "H2#o;vO-J1a2", "weban82x_shubham_property") or die("Error " . mysqli_error($con));
 
+
 //  include('../credentials.php');
 // $con = mysqli_connect("localhost", "root", "", "shubham_property") or die("Error " . mysqli_error($con));
 
 
-$base_url = 'http://shubhamproperty.in/';
+$base_url = 'https://hereshubhamenterprises.com/';
 
 if (isset($_SESSION['AGNETLOGIN']) == 'Active') {
   $agent = $_SESSION['agent_login'];

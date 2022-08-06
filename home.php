@@ -7,7 +7,23 @@
 <?php include('head.php'); ?>
 
 <body>
-    <?php include('menu.php') ?>
+    <?php include('menu.php');
+
+
+    if (isset($_POST['review'])) {
+
+        $name =  strip_tags($_POST['name']);
+        $email =  strip_tags($_POST['email']);
+        $message =  strip_tags($_POST['message']);
+
+        $query = "INSERT INTO `tbl_testimonials`( `tst_name`, `tst_email`, `tst_content`) VALUES  ('" . $name . "'  , '" . $email . "', '" . $message . "')";
+        $sal = mysqli_query($con, $query);
+
+        if ($sal) {
+            echo '<script>alert("Thank you very much for your feedback. We really appreciate it.")</script>';
+        }
+    }
+    ?>
     <main id="content">
         <section class="d-flex flex-column p-releative">
             <img src="images/banner_logo.png" class="banner_logo" alt="">
@@ -16,9 +32,9 @@
                     <div class="row">
                         <div class="col-md-6">
                             <br><br>
-                            <h1 class="fs-50 text-white font-weight-600 width-40vw">Get expert assistance and advice to make the right property investment</h1>
-                            <br>
-                            <h4 class=" text-white font-weight-600  mt-5 width-35vw ">'We Get You Home' FASTER with close to a million properties to choose from</h4>
+                            <h1 class="fs-50 text-white font-weight-600 width-40vw">Shubham Enterprises - Real Estate Consultancy Firm Present E-House Hunting Service</h1>
+                            
+                            <h5 class=" text-white font-weight-600  mt-5 width-35vw ">'We Get You Home' FASTER with close to a million properties to choose from</h5>
                             <br><a href="property-add.php" class="mobile_btn_margin">
                                 <button type="button" class="btn btn-success shadow-none">Post Your Property</button></a>
 
@@ -257,7 +273,7 @@
 
                             <?php
                             $i = 0;
-                            $er = "SELECT * FROM `tbl_property_sell` JOIN tbl_city WHERE  tbl_property_sell.`approval` = '1' AND  tbl_property_sell.`popular` = '1'  AND tbl_property_sell.`city` = tbl_city.city_id ORDER BY tbl_property_sell.`sell_id` DESC LIMIT 9";
+                            $er = "SELECT * FROM `tbl_property_sell` JOIN tbl_city WHERE  tbl_property_sell.`approval` = '1' AND  tbl_property_sell.`popular` = '1'  AND tbl_property_sell.`city` = tbl_city.city_id ORDER BY tbl_property_sell.`sell_id` DESC LIMIT 8";
                             $pro = mysqli_query($con, $er);
                             while ($user = mysqli_fetch_array($pro)) {
                                 $i = $i + 1;
@@ -269,7 +285,7 @@
                                 $img_fetch = mysqli_fetch_array($list_img);
                             ?>
 
-                                <div class="col-lg-4 col-sm-6 mb-6" data-animate="zoomIn">
+                                <div class="col-lg-3 col-sm-6 mb-6" data-animate="zoomIn">
                                     <div class="card shadow-hover-1">
                                         <div class="hover-change-image bg-hover-overlay  rounded-lg card-img-top">
                                             <img src="<?= (($count > '0') ? 'agent-dashboard/images/property/' . $img_fetch['image'] : 'images/bg-home-03.jpg') ?>" alt="<?= $user['property_name'] ?>" class="respimg" />
@@ -330,7 +346,7 @@
                                 $img_fetch = mysqli_fetch_array($list_img);
                             ?>
 
-                                <div class="col-lg-4 col-sm-6 mb-6" data-animate="zoomIn">
+                                <div class="col-lg-3 col-sm-6 mb-6" data-animate="zoomIn">
                                     <div class="card shadow-hover-1">
                                         <div class="hover-change-image bg-hover-overlay  rounded-lg card-img-top">
                                             <img src="<?= (($count > '0') ? 'agent-dashboard/images/property/' . $img_fetch['image'] : 'images/bg-home-03.jpg') ?>" alt="<?= $user['property_name'] ?>" class="respimg" />
@@ -515,7 +531,7 @@
                                     </ul>
                                     <div class="d-flex justify-content-between pt-5 border-top">
                                         <p class="fs-20 font-weight-bold mb-1 property_price">
-                                            <?= (($fetch_row['price_cr'] != '') ? $fetch_row['price_cr']  . $fetch_row['price_val'] : 'Rs' . $fetch_row['property_price'] . '/-') ?>
+                                            ₹ <?= (($fetch_row['price_cr'] != '') ? $fetch_row['price_cr']  . $fetch_row['price_val'] : '' . $fetch_row['property_price'] . '/-') ?>
                                         </p>
                                         <ul class=" list-inline mb-0 d-flex justify-content-end align-items-end h-100 hover-image mr-n5">
                                             <li class="list-inline-item mr-5" data-toggle="tooltip" title="Details">
@@ -541,77 +557,71 @@
         </section>
 
 
-        <!-- <section class="bg-gray-02 pt-9 pb-10  bg-cover" style="background-image: url(images/bg-11.jpg);">
-            <div class="container container-xxl">
-                <div class="text-center">
-                    <h2 class="fs-34 font-weight-normal lh-141 text-white mxw-740">
-                        Services We Offered
-                    </h2>
-                    <span class="heading-divider mx-auto mb-6"></span>
-                </div>
-
-                <div class="slick-slider slick-dots-mt-0" data-slick-options='{"slidesToShow": 4, "autoplay":true,"dots":true,"arrows":false,"responsive":[{"breakpoint": 1600,"settings": {"slidesToShow":3}},{"breakpoint": 992,"settings": {"slidesToShow":2}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"autoplay":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"autoplay":true}}]}'>
-                    <?php
-                    $service = mysqli_query($con, "SELECT * FROM `tbl_service`");
-                    while ($service_fetch = mysqli_fetch_array($service)) {
-                    ?>
-
-                        <div class="box pt-2 pb-4" data-animate="fadeInUp">
-                            <div class="card shadow-hover-xs-2 h-170">
-                                <div class="card-header bg-transparent px-4 pt-4 pb-3 card-img">
-                                    <h2 class="fs-18 lh-2 mb-0"><a href="#" class="text-dark hover-primary"><?= $service_fetch['title'] ?></a></h2>
-
-                                </div>
-                                <div class="card-body py-2">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <img src="dashboard/images/service/<?= $service_fetch['image'] ?>" alt="Buy a new home" class="mb-6 mb-sm-0 mr-sm-6" />
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <p class="mb-0"> <?= $service_fetch['description'] ?> </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </section> -->
-
         <section class="py-13 bg-gray-01">
             <div class="container">
-                <h2 class="fs-30 lh-16 mb-10 text-dark font-weight-600 text-center"> Service We Provide </h2>
-                <div class="row">
-                    <?php
-                    $service = mysqli_query($con, "SELECT * FROM `tbl_service` LIMIT 6");
-                    while ($service_fetch = mysqli_fetch_array($service)) {
-                    ?>
-                        <div class="col-md-4 mb-6">
-                            <div class="card border-0 shadow-xxs-3">
-                                <div class="position-relative d-flex align-items-end card-img-top">
-                                    <a href="" class="hover-shine">
-                                        <img src="dashboard/images/service/<?= $service_fetch['image'] ?>" alt="">
-                                    </a>
-                                </div>
-                                <div class="card-body px-5 pt-3 pb-5">
-                                    <h3 class="fs-18 text-heading lh-194 mb-1">
-                                        <a href="" class=" hover-primary"><?= $service_fetch['title'] ?></a>
-                                    </h3>
-                                    <p class="mb-3"><?= strip_tags($service_fetch['description']) ?></p>
-                                    <a class=" font-weight-500" href="tel:+919522598949">Contact Now <i class="far fa-long-arrow-right text-primary ml-1"></i></a>
+                <h2 class="text-dark text-center pt-3">
+                    Property Related Services</h2>
+                <span class="heading-divider mx-auto"></span>
+                <div class="row mt-7">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-6" data-animate="fadeInUp">
+                        <div class="media rounded-lg bg-grey-3 px-4 h-100 align-items-center serv-sec">
+                            <img src="img2/policeman.png" alt="Type" class="mr-3 my-6 my-sm-0">
+                            <div class="media-body">
+                                <div class="text-uppercase letter-spacing-02 text-body lh-17">Service</div>
+                                <div class="fs-16 lh-15 text-heading letter-spacing-03 font-weight-600 ">Police Verification
                                 </div>
                             </div>
                         </div>
-                    <?php
-                    }
-                    ?>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-6" data-animate="fadeInUp">
+                        <div class="media rounded-lg bg-grey-3 px-4 h-100 align-items-center serv-sec">
+                            <img src="img2/contract.png" alt="Type" class="mr-3 my-6 my-sm-0">
+                            <div class="media-body">
+                                <div class="text-uppercase letter-spacing-02 text-body lh-17">Service</div>
+                                <div class="fs-16 lh-15 text-heading letter-spacing-03 font-weight-600 ">Rental Agreement
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-6" data-animate="fadeInUp">
+                        <div class="media rounded-lg bg-grey-3 px-4 h-100 align-items-center serv-sec">
+                            <img src="img2/online-registration.png" alt="Type" class="mr-3 my-6 my-sm-0">
+                            <div class="media-body">
+                                <div class="text-uppercase letter-spacing-02 text-body lh-17">Service</div>
+                                <div class="fs-16 lh-15 text-heading letter-spacing-03 font-weight-600 ">Land Registration
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-6" data-animate="fadeInUp">
+                        <div class="media rounded-lg bg-grey-3 px-4 h-100 align-items-center serv-sec">
+                            <span class="text-primary fs-64 d-inline-block mr-3">
+                                <svg class="icon icon-price">
+                                    <use xlink:href="#icon-price"></use>
+                                </svg>
+                            </span>
+                            <div class="media-body">
+                                <div class="text-uppercase letter-spacing-02 text-body lh-17">Service</div>
+                                <div class="fs-16 lh-15 text-heading letter-spacing-03 font-weight-600 ">Property Mutation (Namantran)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-6" data-animate="fadeInUp">
+                        <div class="media rounded-lg bg-grey-3 px-4 h-100 align-items-center serv-sec p17">
+                            <img src="img2/loan.png" alt="Type" class="mr-3 my-6 my-sm-0">
+                            <div class="media-body">
+                                <div class="text-uppercase letter-spacing-02 text-body lh-17">Service</div>
+                                <div class="fs-16 lh-15 text-heading letter-spacing-03 font-weight-600 ">House Loan
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
 
 
 
@@ -639,10 +649,10 @@
                                 <div class="card-footer bg-white px-0 text-center pt-3 pb-1">
                                     <ul class="list-inline mb-0">
                                         <li class="list-inline-item mb-2">
-                                            <a href="tel:<?= $list['agent_phone'] ?>" class=" w-40px h-40 rounded-circle  border text-body bg-hover-primary hover-white  border-hover-primary d-flex align-items-center justify-content-center"><i class="fas fa-phone-alt"></i></a>
+                                            <a href="tel:<?= $list['agent_phone'] ?>" class=" w-40px h-40 rounded-circle  border text-body bg-hover-primary hover-white  border-hover-primary d-flex align-items-center serv-sec justify-content-center"><i class="fas fa-phone-alt"></i></a>
                                         </li>
                                         <li class="list-inline-item mb-2">
-                                            <a href="mailto:<?= $list['agent_email'] ?>" class=" w-40px h-40 rounded-circle  border text-body bg-hover-primary hover-white  border-hover-primary d-flex align-items-center justify-content-center"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                            <a href="mailto:<?= $list['agent_email'] ?>" class=" w-40px h-40 rounded-circle  border text-body bg-hover-primary hover-white  border-hover-primary d-flex align-items-center serv-sec justify-content-center"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                                         </li>
 
 
@@ -666,88 +676,6 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="bg-single-image-5 pt-9 pd-b">
-            <div class="container">
-                <h2 class="text-dark text-center mxw-751 px-md-8 lh-163">
-                    We have the most listings and constant updates. So you’ll never miss
-                    out.
-                </h2>
-                <span class="heading-divider mx-auto"></span>
-                <div class="row mt-7 mb-6 mb-lg-11">
-                    <div class="col-lg-6 mb-6 mb-lg-0">
-                        <div class="media rounded-lg bg-white border border-hover shadow-xs-2 shadow-hover-lg-1
-                  px-7  py-8 hover-change-image flex-column flex-sm-row
-                  h-100" data-animate="fadeInUp">
-                            <img src="images/group-16.png" alt="Buy a new home" class="mb-6 mb-sm-0 mr-sm-6" />
-                            <div class="media-body">
-                                <a href="#" class="text-decoration-none d-flex align-items-center">
-                                    <h4 class="fs-20 lh-1625 text-secondary mb-1">
-                                        Buy a new home
-                                    </h4>
-                                    <div class="position-relative d-flex align-items-center ml-2">
-                                        <span class="image text-primary position-absolute pos-fixed-left-center fs-16"><i class="fal fa-long-arrow-right"></i></span>
-                                        <span class="text-primary fs-42  lh-1  hover-image
-                          d-flex  align-items-center
-                        "><svg class="icon icon-long-arrow">
-                                                <use xlink:href="#icon-long-arrow"></use>
-                                            </svg></span>
-                                    </div>
-                                </a>
-                                <p class="mb-0">
-                                    We've over thousands of Listing properties for you!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-6 mb-lg-0">
-                        <div class="
-                  media
-                  rounded-lg
-                  bg-white
-                  border border-hover
-                  shadow-xs-2 shadow-hover-lg-1
-                  px-7
-                  py-8
-                  hover-change-image
-                  flex-column flex-sm-row
-                  h-100
-                " data-animate="fadeInUp">
-                            <img src="images/group-17.png" alt="Sell a home" class="mb-6 mb-sm-0 mr-sm-6" />
-                            <div class="media-body">
-                                <a href="#" class="text-decoration-none d-flex align-items-center">
-                                    <h4 class="fs-20 lh-1625 text-secondary mb-1">
-                                        Sell a home
-                                    </h4>
-                                    <div class="position-relative d-flex align-items-center ml-2">
-                                        <span class="
-                          image
-                          text-primary
-                          position-absolute
-                          pos-fixed-left-center
-                          fs-16
-                        "><i class="fal fa-long-arrow-right"></i></span>
-                                        <span class="
-                          text-primary
-                          fs-42
-                          lh-1
-                          hover-image
-                          d-flex
-                          align-items-center
-                        "><svg class="icon icon-long-arrow">
-                                                <use xlink:href="#icon-long-arrow"></use>
-                                            </svg></span>
-                                    </div>
-                                </a>
-                                <p class="mb-0">
-                                    We've over thousands of buyers and tenants for you!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section> -->
 
 
 
@@ -810,7 +738,85 @@
                 </div>
             </div>
         </section>
+        <div class="primary-content pt-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card border-0">
+                            <div class="card-body p-0">
+                                <h3 class="fs-16 lh-2 text-heading mb-4">Write A Review</h3>
+                                <form method="post">
 
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group mb-4">
+                                                <input placeholder="Your Name" class="form-control form-control-lg border-0" type="text" name="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group mb-4">
+                                                <input type="email" placeholder="Email" name="email" class="form-control form-control-lg border-0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-6">
+                                        <textarea class="form-control form-control-lg border-0" placeholder="Your Review" name="message" rows="5"></textarea>
+                                    </div>
+                                    <button type="submit" name="review" class="btn btn-lg btn-primary px-10 mb-2">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-5">
+
+                        <h3 class="fs-16 lh-2 text-heading mb-4">Customer Reviews</h3>
+                        <div class="slick-slider mx-0 custom-arrow-spacing-30" data-slick-options='{"slidesToShow": 1,"dots":false,"responsive":[{"breakpoint": 992,"settings": {"slidesToShow":1,"arrows":false}},{"breakpoint": 768,"settings": {"slidesToShow": 1,"arrows":false,"autoplay":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"arrows":false}}]}'>
+                            <?php
+                            $i = 0;
+                            $er = "SELECT * FROM  `tbl_testimonial_image` ";
+                            $pro = mysqli_query($con, $er);
+                            while ($ro = mysqli_fetch_array($pro)) {
+                                $i = $i + 1;
+                            ?>
+
+                                <div class="box px-0" data-animate="fadeInUp">
+                                    <div class="media d-flex flex-column flex-md-row align-items-md-center position-relative no-gutters">
+                                        <div class="mr-lg-10 mr-md-12 card border-0 col-md-12">
+                                            <?php if ($ro['img'] == '0') {  ?>
+
+                                                <img src="admin/images/testimonials/<?= $ro['img'] ?>" height="100px">
+
+                                            <?php
+                                            } else {
+
+                                            ?>
+
+                                                <iframe width="100%" height="280" src="https://www.youtube.com/embed/<?= $ro['video'] ?>">
+                                                </iframe>
+
+
+                                            <?php }
+                                            ?>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            <?php
+
+                            }
+                            ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
         <?php include('clients.php'); ?>
 
 

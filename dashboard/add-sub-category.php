@@ -7,9 +7,13 @@ if (isset($_POST["submit"])) {
 
     $main_cat = $_POST['main_cat_name'];
     $cat_name = $_POST['subcat_name'];
+    $file = $_FILES['image']['name'];
+    $tmpfile = $_FILES['image']['tmp_name'];
+    $folder = (($file == '') ? '' : date("dmYHis") . $file);
+    move_uploaded_file($tmpfile, 'images/subcategory/' . $folder);
 
 
-    $rt = "INSERT INTO `tbl_sub_category`( `category_id`, `subcat_name` ) VALUES ('{$main_cat}','{$cat_name}')";
+    $rt = "INSERT INTO `tbl_sub_category`( `category_id`, `subcat_name` , `image` ) VALUES ('$main_cat','$cat_name' , '$folder')";
     $result = mysqli_query($con, $rt);
 
     if ($result) {
@@ -20,7 +24,6 @@ if (isset($_POST["submit"])) {
                Something went wrong. Please try again later 
            </div>';
     }
-    
 }
 ?>
 
@@ -71,14 +74,15 @@ if (isset($_POST["submit"])) {
                                 <p><?= $msg; ?></p>
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control" id="tb-fname" placeholder="Enter Title here" name="subcat_name" required>
                                                 <label for="tb-fname">Category Name</label>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
+                                        <div class="form-floating mb-3">
                                             <select class="form-control" name="main_cat_name">
 
                                                 <option value="">Main Category</option>
@@ -92,6 +96,13 @@ if (isset($_POST["submit"])) {
                                                 ?>
 
                                             </select>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="file" class="form-control" id="tb-fname" placeholder="Enter image here" name="image" required>
+                                                <label for="tb-fname">Sub-Category Image</label>
+                                            </div>
                                         </div>
 
 
