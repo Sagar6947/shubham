@@ -35,3 +35,14 @@
 [23-Jul-2022 00:28:15 America/Chicago] PHP Warning:  Undefined variable $id in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/property-add.php on line 59
 [24-Jul-2022 19:12:38 America/Chicago] PHP Warning:  Undefined variable $id in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/property-add.php on line 59
 [25-Jul-2022 08:20:59 America/Chicago] PHP Warning:  Undefined variable $id in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/property-add.php on line 59
+[31-Jul-2022 02:52:33 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[31-Jul-2022 02:52:34 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[31-Jul-2022 02:52:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[01-Aug-2022 00:38:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[01-Aug-2022 00:39:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[01-Aug-2022 00:41:54 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[01-Aug-2022 00:41:57 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[01-Aug-2022 00:42:05 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[01-Aug-2022 00:42:19 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[01-Aug-2022 00:42:22 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2
+[01-Aug-2022 00:42:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/weban82x/public_html/wt/hereshubhamenterprises.com/updated/config.php on line 2

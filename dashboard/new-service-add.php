@@ -4,9 +4,6 @@ include('session.php');
 $msg = '';
 if (isset($_POST["submit"])) {
     
-
-    $connection = mysqli_connect("localhost", "root", "", "shubham_property") or die("Error " . mysqli_error($con));
-
     $name =  $_POST['ser_name'];
     $descr =  $_POST['description'];
     $price = $_POST['price'];
@@ -78,7 +75,7 @@ if (isset($_POST["submit"])) {
                             <div class="card-body">
                                 <h4 class="card-title">Add New Service</h4>
                                 <p><?= $msg; ?></p>
-                                <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+                                <form method="post" action="" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">

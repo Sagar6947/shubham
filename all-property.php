@@ -82,7 +82,7 @@ if ((isset($_POST['property_type']) != '') ||  (isset($_POST['minimum']) != '') 
         <section class="pt-8 pb-11">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mb-8 mb-lg-0">
+                    <div class="col-lg-9 mb-9 mb-lg-0">
                         <div class="row align-items-sm-center mb-6">
                             <div class="col-md-6">
                                 <!-- <h2 class="fs-15 text-dark mb-0">
@@ -124,7 +124,7 @@ if ((isset($_POST['property_type']) != '') ||  (isset($_POST['minimum']) != '') 
                             ?>
 
 
-                                <div class="col-lg-6 col-sm-6 mb-6 " data-animate="zoomIn">
+                                <div class="col-lg-4 col-sm-4 mb-4 " data-animate="zoomIn">
                                     <div class="card shadow-hover-1 border-1">
                                         <div class="hover-change-image bg-hover-overlay  rounded-lg card-img-top">
                                             <img src="<?= (($count > '0') ? 'agent-dashboard/images/property/' . $img_fetch['image'] : 'images/bg-home-03.jpg') ?>" alt="<?= $user['property_name'] ?>" class="respimg" />
@@ -216,7 +216,7 @@ if ((isset($_POST['property_type']) != '') ||  (isset($_POST['minimum']) != '') 
                     </div>
 
 
-                    <div class="col-lg-4 primary-sidebar sidebar-sticky" id="sidebar">
+                    <div class="col-lg-3 primary-sidebar sidebar-sticky" id="sidebar">
                         <?php include 'search-form.php'; ?>
                     </div>
                 </div>

@@ -6,9 +6,14 @@ if (isset($_POST["submit"])) {
 
 
     $cat_name = $_POST['cat_name'];
+    $file = $_FILES['image']['name'];
+    $tmpfile = $_FILES['image']['tmp_name'];
+    $folder = (($file == '') ? '' : date("dmYHis") . $file);
+    move_uploaded_file($tmpfile, 'images/category/' . $folder);
 
- 
-    $rt = "INSERT INTO `tbl_category`( `cat_name`) VALUES ('{$cat_name}')";
+
+
+    $rt = "INSERT INTO `tbl_category`( `cat_name` , `image`) VALUES ('$cat_name' , '$folder')";
     $result = mysqli_query($con, $rt);
 
     if ($result) {
@@ -65,20 +70,26 @@ if (isset($_POST["submit"])) {
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Add Team</h4>
+                                <h4 class="card-title">Add Category</h4>
                                 <p><?= $msg; ?></p>
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control" id="tb-fname" placeholder="Enter Title here" name="cat_name" required>
                                                 <label for="tb-fname">Category Name</label>
                                             </div>
                                         </div>
-                                        
-                                        
-                                        <div class="col-12">
-                                            <div class="d-md-flex align-items-center mt-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating mb-3">
+                                                <input type="file" class="form-control" id="tb-fname" placeholder="Enter image here" name="image" required>
+                                                <label for="tb-fname">Category Image</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-12">
+                                            <div class="align-items-center mt-3">
 
                                                 <div class="ms-auto mt-3 mt-md-0">
                                                     <button type="submit" name="submit" class="btn btn-primary text-white">Submit</button>

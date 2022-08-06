@@ -13,204 +13,94 @@ include 'config.php';
     <?php include('menu.php') ?>
     <main id="content">
 
-        <section style="background-image: url('images/bg-about-us.jpg')" class="bg-img-cover-center py-10 pt-md-16 pb-md-17 bg-overlay">
-            <div class="container position-relative z-index-2 text-center">
+        <section class="py-11" style="background-image: url('images/pattern.jpg');">  
+            <div class="container container-xxl">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 custom-lg-size-1-1 mb-lg-0 mb-6" data-animate="fadeInLeft">
+                        <a href="#">
+                            <div class="bg-cover h-100 rounded-lg" style="background-image: url('img2/shahiji.jpeg')"></div>
+                        </a>
+                    </div>
+                    <div class="col-xl-7 col-lg-6" data-animate="fadeInRight">
+                        <div class="bg-secondary rounded-lg pt-sm-9 px-sm-7 pb-sm-11 p-6">
+                            <h2 class="mt-1 mb-2">
+                                <a href="agent-details-1.html" class="fs-30 font-weight-600 text-white">Late shree Shashi Bhushan Mishra Ji</a>
+                            </h2>
+                            <p class="opacity-4 text-white fs-16 font-weight-500">
+                                (20-02-1973 To 14-05-2021)
+                            </p>
 
-                <div class="mxw-751">
-                    <h3 class="
-                text-white
-                fs-25 fs-md-30
-                lh-15
-                font-weight-normal
-                mt-4
-                mb-10
-              " data-animate="fadeInRight">
-                        Shubham Enterprises is now Bhopal's LEADING and LARGEST broking house with 100+ professionals having a reach in ALL CORNERS in Bhopal.
+                            <p class="text-white">
+                                He Was The Founder And This Company (Shubham Enterprises) Was Established By him.
 
-                    </h3>
+                                Bio - He was Also Working With Maruti (2005-2021) Meanwhile He was Smart Investor Too, Who Leads Him Towards Real Estate Businesses.
+                                Then He started His Own Company Name As Shubham Enterprises With His Son Shubham Mishra in 2012
+                            </p>
+
+
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="bg-patten-03 bg-gray-01 pb-13">
+        <section class="bg-gray-02 pt-9 pb-9 pb-lg-11">
             <div class="container">
-                <div class="card border-0 mt-n13 z-index-3 mb-12">
-                    <div class="card-body p-6 px-lg-14 py-lg-13">
-                        <p class="
-                  letter-spacing-263
-                  text-uppercase text-primary
-                  mb-6
-                  font-weight-500
-                  text-center
-                ">
-                            Welcome To Shubham Enterprises
-                        </p>
-                        <h5 class="text-heading mb-4   text-center lh-16 px-6">
-                            Whether you are searching for a property, selling your property or looking for a new career opportunity, Choosing Shubham Enterprises means you choose success.
-                        </h5>
+                <div class="row no-gutters">
+                    <div class="col-lg-4" data-animate="fadeInLeft">
+                        <div class="card bg-overlay-gradient-4 rounded-0 border-0 bg-overlay-opacity-74">
+                            <img src="img2/shubham.jpeg" class="card-img rounded-0" alt="Tommy Wolfe" />
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-6 position-relative-sm">
+                                <div class="border-white-opacity-03 border-bottom">
+                                    <h2 class="mb-1">
+                                        <a href="#" class="fs-22 text-white">Shubham Mishra</a>
+                                    </h2>
+                                    <p class="text-lighter mb-1">17 Jan 1995</p>
 
-                        <div class="row">
-
-                            <div class="col-sm-6">
-
-                                <img src="images/gallery-lg-10.jpg" width="100%">
-                            </div>
-                            <div class="col-sm-6">
-
-                                <p class="text-justify">
-
-                                    Shubham enterprises established by Late Shashibhushan mishra Ji Run By shubham mishra & Established year 01 Jan 2012 (10 Years Experience ) .<br>
-                                <h6>Service Provide by Us - </h6>
-                                <ul>
-
-
-                                    <li> Property suggestions, mortgage and evaluations (plot, rental, purchase, sale etc.)</li>
-                                    <li> Property mutations (Namantran)</li>
-                                    <li> Good architect consultants</li>
-                                    <li> Loans ( housing and personal )</li>
-                                    <li> Insurance (car, health, life, etc.)</li>
-                                    <li> Income tax consultants</li>
-                                    <li> Rent agreements verification</li>
-                                    <li> Home Tuition 5th to 12th all subject</li>
-                                    <li> Painting, white wash</li>
-                                    <li> Plumber, Electrician services</li>
-                                    <li> Sale purchase second hand vehicles</li>
-                                    <li> Marriage garden, hall and venue references</li>
-                                    <li> Press control</li>
-                                </ul>
-
-
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                </div>
-                <section class="bg-secondary text-white pt-8 pb-7">
-                    <div class="container">
-                        <div class="row no-gutters">
-                            <div class="col-sm-6 col-lg-3 mb-6 mb-sm-0 px-6 text-center" data-animate="fadeInUp">
-                                <div class="counterup fs-56 lh-1 mb-3 pt-2" data-start="0" data-end="12" data-decimals="0" data-duration="0" data-separator="">12
                                 </div>
-                                <div class="text-uppercase fs-13 lh-184 letter-spacing-163 opacity-7">Years of Experience</div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 mb-6 mb-sm-0 px-6 text-center" data-animate="fadeInUp">
-                                <div class="counterup fs-56 lh-1 mb-3 pt-2" data-start="0" data-end="200" data-decimals="0" data-duration="0" data-separator="">200
-                                </div>
-                                <div class="text-uppercase fs-13 lh-184 letter-spacing-163 opacity-7">Properties Listing</div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 mb-6 mb-sm-0 px-6 text-center" data-animate="fadeInUp">
-                                <div class="counterup fs-56 lh-1 mb-3 pt-2" data-start="0" data-end="400" data-decimals="0" data-duration="0" data-separator="">400
-                                </div>
-                                <div class="text-uppercase fs-13 lh-184 letter-spacing-163 opacity-7">Agents</div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 mb-6 mb-sm-0 px-6 text-center" data-animate="fadeInUp">
-                                <div class="counterup fs-56 lh-1 mb-3 pt-2" data-start="0" data-end="800" data-decimals="0" data-duration="0" data-separator="">800
-                                </div>
-                                <div class="text-uppercase fs-13 lh-184 letter-spacing-163 opacity-7">Users</div>
+
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="col-lg-8 mt-6 mt-lg-0">
+                        <div class="card border-md-0 mb-12 mb-md-0" data-animate="fadeInRight">
+                            <div class="row no-gutters d-flex align-items-center h-100">
 
-                <div class="row mt-8">
-                    <div class="col-md-6 mb-6 mb-lg-0">
-                        <div class="card shadow-2 px-7 pb-6 pt-4 h-100 border-0">
-                            <div class="
-                    card-img-top
-                    d-flex
-                    align-items-end
-                    justify-content-center
-                  ">
-                                <span class="text-primary fs-90 lh-1"><img src="images/vision.png" class="h-150" alt="Visison"></span>
-                            </div>
-                            <div class="card-body px-0 pt-6 pb-0 text-center">
+                                <div class="col-md-12">
+                                    <div class="card-body text-justify">
+                                        <h2 class="mb-1">
+                                            <a href="#" class="fs-18 font-weight-500 text-dark hover-primary">Shubham Mishra</a>
+                                        </h2>
+                                        <p> Education - Higher secondary school From MP BOARD ( With Commerce Stream)<br>
+                                            Graduation - B.com .</a>
+                                        </p>
 
-                                <p class="card-text px-2">
-                                    With an unsurpassed support structure to back them up, this model produces highly motivated Sales Associates who invest maximum effort. This ensures a first-class level of service for vendors and purchasers alike, resulting in maximum client satisfaction.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-6 mb-lg-0">
-                        <div class="card shadow-2 px-7 pb-6 pt-4 h-100 border-0">
-                            <div class="
-                    card-img-top
-                    d-flex
-                    align-items-end
-                    justify-content-center
-                  ">
-                                <span class="text-primary fs-90 lh-1">
-                                    <img src="images/mission.png" class="h-150" alt="Mission">
-                                </span>
-                            </div>
-                            <div class="card-body px-0 pt-6 pb-0 text-center">
+                                        <p class="text-gray">
+                                            In Year 2012 , With The Guidance Of His Father's Shubham Started A Business In Real Estate And Established A company Name As Shubham Enterprises . In Initial phase Of Starting his business Is Being Up's And Down in Business But He took All His Action In Very Professional Way To Right Direction Now With 12Years + Experience This Company Run Without any complications. He Have 12years+ Experience In Flied Work , Coordination With Clients , Facing And Solving Issues.<br><br>
 
-                                <p class="card-text px-2">
-                                    Develop premium quality real estate franchise system, providing sustained value to end users and community. Be recognized and respected as a Leader of innovation and Sustainability in the region. Service every town and city within India with equal passion to enhance customer delight.
-                                </p>
+                                          <b>  What Shubham Experience Tell About This Filed - </b><br><br>
+
+                                            Shubham - In This Filed , You Can Learn How To Deal With People From different Sectors , Improve Your Marketing And Communication Skills . This Is Very Good Professional Field For carrier . To provide Service In Real Estate.<br>
+                                            <br>
+                                            With All This 12years + Experience I've Learnt A Lot About Society , Peoples , Market , Finance And Still Learning Something New Every Single Day And Countinue My journey In this Field
+                                        </p>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <!-- <div class="card border-md-0" data-animate="fadeInRight">
+                            <div class="row no-gutters d-flex align-items-center flex-md-row flex-column-reverse h-100">
 
+                                <div class="col-md-12">
+                                    <img src="img2/family.jpeg" class="card-img rounded-0" alt="Pearl Sanders" />
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="pt-lg-13 pb-lg-10 py-11 bg-gray-02">
-            <div class="container">
-                <p class="text-primary font-weight-500 letter-spacing-263 text-center text-uppercase mb-5"> Meet our agents</p>
-                <h2 class="text-dark text-center mb-9 lh-16"> Need A free consultation ? Contact Us!</h2>
-                <div class="slick-slider mx-0 custom-arrow-spacing-30" data-slick-options='{"slidesToShow": 4,"dots":true,"arrows":false,"responsive":[{"breakpoint": 1200,"settings": {"slidesToShow":3,"arrows":false}},{"breakpoint": 992,"settings": {"slidesToShow":3,"arrows":false}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"arrows":false,"dots":true,"autoplay":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"arrows":false,"dots":true}}]}'>
-                    <?php
-                    $i = 0;
-                    $listing = mysqli_query($con, "SELECT * FROM `tbl_agent` WHERE `agent_status` = '1' AND `featured`='1' ORDER BY `agent_id` ASC ");
-                    while ($list = mysqli_fetch_array($listing)) {
-                    ?>
-                        <div class="box" data-animate="fadeInUp">
-                            <div class="card border-0 shadow-hover-3 px-4">
-                                <div class="card-body text-center pt-6 pb-3 px-0">
-                                    <a href="#" class="d-inline-block mb-2">
-                                        <img src="<?= (($list['agent_image'] == '') ? 'images/team.jpg'  : 'dashboard/images/agents/' . $list['agent_image'] . ' ') ?>" alt="<?= $list['agent_name'] ?>" class="img-resp">
-                                    </a>
-                                    <a href="#" class="d-block fs-16 text-dark mb-0 font-weight-500 hover-primary lh-15"><?= $list['agent_name'] ?></a>
-                                    <p class="mb-0">Our Agents</p>
-
-                                </div>
-                                <div class="card-footer bg-white px-0 text-center pt-3 pb-1">
-                                    <ul class="list-inline mb-0">
-                                        <li class="list-inline-item mb-2">
-                                            <a href="tel:<?= $list['agent_phone'] ?>" class=" w-40px h-40 rounded-circle  border text-body bg-hover-primary hover-white  border-hover-primary d-flex align-items-center justify-content-center"><i class="fas fa-phone-alt"></i></a>
-                                        </li>
-                                        <li class="list-inline-item mb-2">
-                                            <a href="mailto:<?= $list['agent_email'] ?>" class=" w-40px h-40 rounded-circle  border text-body bg-hover-primary hover-white  border-hover-primary d-flex align-items-center justify-content-center"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                                        </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                </div>
-                <div class="p-6 mxw-670 pl-md-9 d-sm-flex align-items-sm-center position-relative mt-10 rounded-lg" style="background-color: #eaeff7" data-animate="fadeInUp">
-                    <div class="mt-md-0 mt-6">
-                        <h4 class="text-secondary fs-20 font-weight-normal">Our Agent Understand what <span class="font-weight-600"> You Require </span></h4>
-
-                    </div>
-                    <div class="ml-auto">
-                        <a href="realtor.php" class="btn btn-lg btn-primary rounded-lg mt-sm-0 mt-6">Contact now</a>
-                    </div>
-                    <i class="far fa-users h-64 w-64px bg-indigo d-flex justify-content-center align-items-center text-white rounded-circle fs-24 position-absolute custom-pos-icon"></i>
-                </div>
-            </div>
-        </section>
-
-        <?php include('clients.php'); ?>
-
-
 
     </main>
     <?php include('footer.php'); ?>

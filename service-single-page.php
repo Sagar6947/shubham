@@ -60,7 +60,7 @@ $service_id = $_GET['sid'];
                                         <div class="box">
                                             <div class="item item-size-3-2">
                                                 <div class="card p-0">
-                                                    <a href="img2/s3.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="03" style="background-image:url('dashboard/images/newservice/<?php echo $row['image']; ?>')">
+                                                    <a href="dashboard/images/newservice/<?php echo $row['image']; ?>" class="card-img" data-gtf-mfp="true" data-gallery-id="03" style="background-image:url('dashboard/images/newservice/<?php echo $row['image']; ?>')">
                                                     </a>
                                                 </div>
                                             </div>
@@ -83,6 +83,8 @@ $service_id = $_GET['sid'];
             </div>
             </div>
         </section>
+
+        <hr class="mt-7">
                     
         <div class="primary-content pt-8">
             <div class="container">
